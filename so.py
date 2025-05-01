@@ -1,4 +1,5 @@
 import os
+
 #
 # print(os.path.isfile('C:\\Proyectos\\Python\\Scripting\\Unidad3\\GEVG-Laptop2.txt'))
 # print(os.path.isfile('C:\\Proyectos\\Python\\Scripting\\Unidad3'))

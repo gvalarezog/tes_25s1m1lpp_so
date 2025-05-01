@@ -1,5 +1,6 @@
 import platform
 
+
 archivo = None
 try:
     archivo = open(str(platform.node()) + '.txt', 'a')
