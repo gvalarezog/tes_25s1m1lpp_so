@@ -1,14 +1,18 @@
+import os
 import platform
 
 
 archivo = None
 try:
-    archivo = open(str(platform.node()) + '.txt', 'a')
+    env = os.environ
+    archivo = open(str(platform.node()) + '.txt', 'w')
     archivo.write(f'Procesador: {platform.processor()}\n'
                   f'Arquitectura: {platform.architecture()}\n'
                   f'Plataforma: {platform.platform()}\n'
                   f'Sistema: {platform.system() + ' ' + platform.release()}\n'
                   f'Version de Python: {platform.python_version()}\n')
+    for llave, valor in env.items():
+        archivo.write(f'{llave}: {valor}\n')
 
     print(f'Procesador: {platform.processor()}')
     print(f'Arquitectura: {platform.architecture()}')
